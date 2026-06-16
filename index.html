@@ -16,11 +16,23 @@
                 </svg>
                 <span class="nav-label">Home</span>
             </button>
+            <button class="nav-item" data-screen="explore">
+                <svg viewBox="0 0 24 24" class="nav-icon">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5z"/>
+                </svg>
+                <span class="nav-label">Explore</span>
+            </button>
             <button class="nav-item" data-screen="plan">
                 <svg viewBox="0 0 24 24" class="nav-icon">
                     <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/>
                 </svg>
                 <span class="nav-label">Plan</span>
+            </button>
+            <button class="nav-item" data-screen="friends">
+                <svg viewBox="0 0 24 24" class="nav-icon">
+                    <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                </svg>
+                <span class="nav-label">Friends</span>
             </button>
             <button class="nav-item" data-screen="profile">
                 <svg viewBox="0 0 24 24" class="nav-icon">
@@ -36,494 +48,567 @@
             <section id="home-screen" class="screen active">
                 <div class="home-header">
                     <div class="header-top">
-                        <div class="welcome-section">
-                            <h1 class="welcome-text">What's your plan?</h1>
-                        </div>
-                        <button class="notification-btn">
+                        <h1 class="greeting">Good evening,<br><span class="user-name">Valia</span> ⭐</h1>
+                        <button class="notification-btn" title="Notifications">
                             <svg viewBox="0 0 24 24">
                                 <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/>
                             </svg>
                         </button>
                     </div>
                     <div class="logo-container">
-                        <div class="logo">iamOUT</div>
+                        <div class="logo-badge">OUTING</div>
                     </div>
                 </div>
 
                 <div class="home-content">
-                    <button class="cta-button primary" onclick="startFilterFlow()">Plan an Outing</button>
-                    <button class="cta-button secondary" onclick="startFilterFlow()">Plan Now</button>
-
+                    <!-- Events Section -->
                     <section class="events-section">
-                        <h2 class="section-title">Trending Events</h2>
-                        <div class="events-grid">
+                        <div class="section-header">
+                            <h2 class="section-title">Events for your taste</h2>
+                            <a href="#" class="see-all">See all</a>
+                        </div>
+                        <div class="events-carousel">
                             <div class="event-card">
-                                <div class="event-header">🎵 Festival</div>
-                                <div class="event-name">Summer Music Fest</div>
-                                <div class="event-time">Today, 6 PM</div>
+                                <div class="event-image">📷</div>
+                                <div class="event-overlay">
+                                    <h3>This is Athens festival</h3>
+                                    <p>Ilisia Park</p>
+                                    <p class="event-time">29/05 18:00-23:00</p>
+                                </div>
                             </div>
                             <div class="event-card">
-                                <div class="event-header">🎤 Concert</div>
-                                <div class="event-name">Live Jazz Night</div>
-                                <div class="event-time">Fri, 8 PM</div>
-                            </div>
-                            <div class="event-card">
-                                <div class="event-header">🎉 Party</div>
-                                <div class="event-name">Rooftop Bash</div>
-                                <div class="event-time">Sat, 10 PM</div>
+                                <div class="event-image">📷</div>
+                                <div class="event-overlay">
+                                    <h3>Party</h3>
+                                    <p>Taratsa</p>
+                                    <p class="event-time">29/05 21:00-03:00</p>
+                                </div>
                             </div>
                         </div>
                     </section>
 
+                    <!-- Discover Section -->
+                    <section class="discover-section">
+                        <h2 class="section-title">Discover</h2>
+                        <div class="discover-card">
+                            <div class="discover-image">🎥</div>
+                            <h3>New Local Experiences</h3>
+                            <span class="ad-badge">Ad</span>
+                        </div>
+                    </section>
+
+                    <!-- Daily Offers Section -->
                     <section class="offers-section">
                         <h2 class="section-title">Daily Offers</h2>
-                        <div class="offer-card">
-                            <div class="offer-tag">TODAY ONLY</div>
-                            <div class="offer-text">50% off cocktails at The Blue Lounge</div>
-                            <div class="offer-time">6 PM - 9 PM</div>
+                        <div class="offer-item">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23FFB366' width='100' height='100'/%3E%3Ctext x='50' y='50' font-size='40' text-anchor='middle' dy='.3em' fill='white'%3E🍔%3C/text%3E%3C/svg%3E" alt="burger" class="offer-image">
+                            <div class="offer-details">
+                                <p class="offer-brand">BURGER KING</p>
+                                <p class="offer-text">-20% on all burgers</p>
+                            </div>
                         </div>
-                        <div class="offer-card">
-                            <div class="offer-tag">LIMITED</div>
-                            <div class="offer-text">Free appetizer with dinner booking</div>
-                            <div class="offer-time">Valid this week</div>
-                        </div>
-                    </section>
-
-                    <section class="competitions-section">
-                        <h2 class="section-title">Competitions</h2>
-                        <div class="competition-card">
-                            <div class="comp-title">Hottest Outfit</div>
-                            <div class="comp-prize">Win: VIP Pass</div>
-                            <div class="comp-entries">234 entries</div>
-                        </div>
-                        <div class="competition-card">
-                            <div class="comp-title">Best Moment</div>
-                            <div class="comp-prize">Win: $500</div>
-                            <div class="comp-entries">189 entries</div>
+                        <div class="offer-item">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%2366BB6A' width='100' height='100'/%3E%3Ctext x='50' y='50' font-size='40' text-anchor='middle' dy='.3em' fill='white'%3E☕%3C/text%3E%3C/svg%3E" alt="coffee" class="offer-image">
+                            <div class="offer-details">
+                                <p class="offer-brand">BLUE BOTTLE COFFEE</p>
+                                <p class="offer-text">2+1 Matcha Lattes</p>
+                            </div>
                         </div>
                     </section>
                 </div>
             </section>
 
-            <!-- PLAN SCREEN (Filter Flow) -->
+            <!-- FILTERS SCREEN -->
+            <section id="filters-screen" class="screen">
+                <div class="filters-container">
+                    <div class="filters-sidebar">
+                        <button class="filter-tab active" data-tab="place-hour">PLACE/HOUR</button>
+                        <button class="filter-tab" data-tab="basics">BASICS</button>
+                        <button class="filter-tab" data-tab="preferences">PREFERENCES</button>
+                        <button class="filter-tab" data-tab="requirements">REQUIREMENTS</button>
+                    </div>
+                    <div class="filters-content">
+                        <!-- PLACE/HOUR TAB -->
+                        <div class="filter-tab-content active" id="place-hour-tab">
+                            <h2>Activity & Place</h2>
+                            <div class="filter-group">
+                                <label class="filter-label">ACTIVITY</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-item"><input type="checkbox"> Food</label>
+                                    <label class="checkbox-item"><input type="checkbox"> Drink</label>
+                                    <label class="checkbox-item"><input type="checkbox"> Dance</label>
+                                </div>
+                            </div>
+                            <div class="filter-group">
+                                <label class="filter-label">TYPE OF PLACE</label>
+                                <div class="pill-group">
+                                    <button class="pill">WINE BAR</button>
+                                    <button class="pill">RESTAURANT</button>
+                                    <button class="pill">TAVERNA</button>
+                                    <button class="pill">BAR</button>
+                                    <button class="pill">CLUB</button>
+                                    <button class="pill">BREWERY</button>
+                                </div>
+                            </div>
+                            <div class="filter-group">
+                                <label class="filter-label">CUISINE</label>
+                                <div class="pill-group">
+                                    <button class="pill">ITALIAN</button>
+                                    <button class="pill">PIZZA</button>
+                                    <button class="pill">BURGER</button>
+                                    <button class="pill">GREEK</button>
+                                    <button class="pill">SUSHI</button>
+                                </div>
+                            </div>
+                            <div class="filter-group">
+                                <label class="filter-label">DRINK TYPE</label>
+                                <div class="pill-group">
+                                    <button class="pill">WINE</button>
+                                    <button class="pill">COFFEE</button>
+                                    <button class="pill">COCKTAIL</button>
+                                    <button class="pill">BEER</button>
+                                    <button class="pill">SPIRITS</button>
+                                </div>
+                            </div>
+                            <div class="filter-group">
+                                <label class="filter-label">CROWD</label>
+                                <div class="slider-container">
+                                    <input type="range" min="0" max="100" value="50" class="crowd-slider">
+                                    <div class="slider-labels">
+                                        <span>QUIET</span>
+                                        <span>PACKED</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- BASICS TAB -->
+                        <div class="filter-tab-content" id="basics-tab">
+                            <h2>Basics</h2>
+                            <div class="filter-group">
+                                <label class="filter-label">DATE SELECTION</label>
+                                <div class="date-badge">📅 Selected Date: 12/06/2026</div>
+                            </div>
+                            <div class="filter-group">
+                                <div class="quick-buttons">
+                                    <button class="quick-btn heart">❤️ Near Me</button>
+                                    <button class="quick-btn">Now</button>
+                                </div>
+                            </div>
+                            <div class="filter-group">
+                                <label class="filter-label">LOCATION</label>
+                                <input type="text" placeholder="Search city or area..." class="search-input">
+                            </div>
+                            <div class="filter-group">
+                                <label class="filter-label">TRANSPORTATION</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-item checked"><input type="checkbox" checked> Walking distance</label>
+                                    <label class="checkbox-item"><input type="checkbox"> Car</label>
+                                    <label class="checkbox-item"><input type="checkbox"> Metro</label>
+                                </div>
+                            </div>
+                            <div class="filter-group">
+                                <label class="filter-label">TIME OF DAY</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-item"><input type="checkbox"> Morning</label>
+                                    <label class="checkbox-item checked"><input type="checkbox" checked> Afternoon</label>
+                                    <label class="checkbox-item"><input type="checkbox"> Early night</label>
+                                    <label class="checkbox-item"><input type="checkbox"> Late night</label>
+                                </div>
+                            </div>
+                            <div class="filter-group">
+                                <label class="filter-label">DURATION</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-item"><input type="checkbox"> 1-2h</label>
+                                    <label class="checkbox-item checked"><input type="checkbox" checked> 3-5h</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PREFERENCES TAB -->
+                        <div class="filter-tab-content" id="preferences-tab">
+                            <h2>Preferences</h2>
+                            <div class="filter-group">
+                                <label class="filter-label">STYLE</label>
+                                <div class="pill-group">
+                                    <button class="pill">CASUAL</button>
+                                    <button class="pill">GLAM</button>
+                                    <button class="pill active">YOUTHFUL</button>
+                                    <button class="pill">ISLAND VIBES</button>
+                                    <button class="pill">COZY</button>
+                                </div>
+                            </div>
+                            <div class="filter-group">
+                                <label class="filter-label">MY MOOD</label>
+                                <div class="pill-group">
+                                    <button class="pill active">ENERGETIC</button>
+                                    <button class="pill">SOCIAL</button>
+                                    <button class="pill">INTROVERT</button>
+                                    <button class="pill">PARTY</button>
+                                    <button class="pill">VERY HUNGRY</button>
+                                </div>
+                            </div>
+                            <div class="filter-group">
+                                <label class="filter-label">SPACE</label>
+                                <div class="space-buttons">
+                                    <button class="space-btn">INDOOR</button>
+                                    <button class="space-btn active">OUTDOOR</button>
+                                    <button class="space-btn">ROOFTOP</button>
+                                </div>
+                            </div>
+                            <div class="filter-group">
+                                <label class="filter-label">MUSIC</label>
+                                <select class="dropdown">
+                                    <option>Jazz</option>
+                                    <option>Electronic</option>
+                                    <option>Pop</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label class="filter-label">DECORATION</label>
+                                <select class="dropdown">
+                                    <option>Modern</option>
+                                    <option>Vintage</option>
+                                    <option>Minimalist</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label class="filter-label">DRESS CODE</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-item checked"><input type="checkbox" checked> Casual</label>
+                                    <label class="checkbox-item"><input type="checkbox"> Smart Casual</label>
+                                    <label class="checkbox-item"><input type="checkbox"> Formal</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- REQUIREMENTS TAB -->
+                        <div class="filter-tab-content" id="requirements-tab">
+                            <h2>Requirements</h2>
+                            <div class="filter-group">
+                                <div class="checkbox-group">
+                                    <label class="checkbox-item"><input type="checkbox"> Pet-friendly</label>
+                                    <label class="checkbox-item"><input type="checkbox"> Parking</label>
+                                    <label class="checkbox-item checked"><input type="checkbox" checked> High-speed Wi-Fi</label>
+                                    <label class="checkbox-item"><input type="checkbox"> Vegan Options</label>
+                                    <label class="checkbox-item"><input type="checkbox"> Smoking Area</label>
+                                    <label class="checkbox-item"><input type="checkbox"> Accessibility (Wheelchair)</label>
+                                    <label class="checkbox-item checked"><input type="checkbox" checked> Child friendly</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-actions">
+                    <button class="btn-secondary">Show in a Map</button>
+                    <button class="btn-primary">Generate a Plan</button>
+                </div>
+            </section>
+
+            <!-- PLAN SCREEN (Results) -->
             <section id="plan-screen" class="screen">
-                <div class="screen-header">
-                    <button class="back-btn" onclick="goBack()">←</button>
-                    <h1 class="screen-title">Filter Your Outing</h1>
-                    <div class="progress-bar">
-                        <div class="progress-fill" id="progress"></div>
+                <div class="plan-header">
+                    <div class="plan-title">
+                        <h2>Your plan is ready</h2>
+                        <div class="success-badge">✓</div>
                     </div>
                 </div>
 
-                <div class="filter-container">
-                    <!-- Step 1: Reason -->
-                    <div class="filter-step" data-step="1">
-                        <div class="filter-header">
-                            <h2>Why are you going out?</h2>
-                            <button class="info-btn" onclick="showInfo('reason')">ℹ️</button>
+                <div class="plan-content">
+                    <!-- Itinerary Summary -->
+                    <div class="itinerary-section">
+                        <div class="itinerary-header">
+                            <h3>Itinerary Summary</h3>
+                            <span class="duration-badge">⏱ Total Duration: 4h 30m</span>
                         </div>
-                        <div class="filter-options">
-                            <button class="filter-option" data-value="study">📚 Study</button>
-                            <button class="filter-option" data-value="date">💕 Date</button>
-                            <button class="filter-option" data-value="friends">👥 Friends</button>
-                        </div>
-                    </div>
-
-                    <!-- Step 2: Area -->
-                    <div class="filter-step" data-step="2">
-                        <div class="filter-header">
-                            <h2>Where do you want to go?</h2>
-                            <button class="info-btn" onclick="showInfo('area')">ℹ️</button>
-                        </div>
-                        <div class="filter-options">
-                            <button class="filter-option" data-value="downtown">Downtown</button>
-                            <button class="filter-option" data-value="uptown">Uptown</button>
-                            <button class="filter-option" data-value="beach">Beach Area</button>
-                            <button class="filter-option" data-value="suburbs">Suburbs</button>
-                        </div>
-                    </div>
-
-                    <!-- Step 3: Distance -->
-                    <div class="filter-step" data-step="3">
-                        <div class="filter-header">
-                            <h2>Walking distance?</h2>
-                            <button class="info-btn" onclick="showInfo('distance')">ℹ️</button>
-                        </div>
-                        <div class="filter-options">
-                            <button class="filter-option" data-value="15min">💨 15 min</button>
-                            <button class="filter-option" data-value="30min">🚶 30 min</button>
-                            <button class="filter-option" data-value="60min">🚇 60 min</button>
-                            <button class="filter-option" data-value="any">🚗 Any</button>
-                        </div>
-                    </div>
-
-                    <!-- Step 4: Time & Duration -->
-                    <div class="filter-step" data-step="4">
-                        <div class="filter-header">
-                            <h2>When & How long?</h2>
-                            <button class="info-btn" onclick="showInfo('time')">ℹ️</button>
-                        </div>
-                        <div class="time-inputs">
-                            <input type="time" id="start-time" class="time-input" placeholder="Start time">
-                            <input type="number" id="duration" class="time-input" placeholder="Duration (hours)" min="1" max="12">
-                        </div>
-                    </div>
-
-                    <!-- Step 5: Vibe & Mood -->
-                    <div class="filter-step" data-step="5">
-                        <div class="filter-header">
-                            <h2>What's the vibe?</h2>
-                            <button class="info-btn" onclick="showInfo('vibe')">ℹ️</button>
-                        </div>
-                        <div class="filter-options">
-                            <button class="filter-option" data-value="chill">😎 Chill</button>
-                            <button class="filter-option" data-value="energetic">⚡ Energetic</button>
-                            <button class="filter-option" data-value="romantic">✨ Romantic</button>
-                            <button class="filter-option" data-value="wild">🔥 Wild</button>
-                        </div>
-                    </div>
-
-                    <!-- Step 6: Clothes Style -->
-                    <div class="filter-step" data-step="6">
-                        <div class="filter-header">
-                            <h2>Dress code?</h2>
-                            <button class="info-btn" onclick="showInfo('clothes')">ℹ️</button>
-                        </div>
-                        <div class="filter-options">
-                            <button class="filter-option" data-value="casual">👖 Casual</button>
-                            <button class="filter-option" data-value="smart-casual">🎩 Smart Casual</button>
-                            <button class="filter-option" data-value="formal">🎩 Formal</button>
-                            <button class="filter-option" data-value="beach">🩱 Beach</button>
-                        </div>
-                    </div>
-
-                    <!-- Step 7: Age Range -->
-                    <div class="filter-step" data-step="7">
-                        <div class="filter-header">
-                            <h2>Age group?</h2>
-                            <button class="info-btn" onclick="showInfo('age')">ℹ️</button>
-                        </div>
-                        <div class="filter-options">
-                            <button class="filter-option" data-value="18-25">18-25</button>
-                            <button class="filter-option" data-value="25-35">25-35</button>
-                            <button class="filter-option" data-value="35-50">35-50</button>
-                            <button class="filter-option" data-value="50+">50+</button>
-                        </div>
-                    </div>
-
-                    <!-- Step 8: Food/Drink -->
-                    <div class="filter-step" data-step="8">
-                        <div class="filter-header">
-                            <h2>Food & Drink?</h2>
-                            <button class="info-btn" onclick="showInfo('food')">ℹ️</button>
-                        </div>
-                        <div class="filter-options">
-                            <button class="filter-option" data-value="vegetarian">🥗 Vegetarian</button>
-                            <button class="filter-option" data-value="seafood">🐟 Seafood</button>
-                            <button class="filter-option" data-value="meat">🍖 Meat</button>
-                            <button class="filter-option" data-value="any-food">🍴 Any</button>
-                        </div>
-                    </div>
-
-                    <!-- Step 9: Budget -->
-                    <div class="filter-step" data-step="9">
-                        <div class="filter-header">
-                            <h2>What's your budget?</h2>
-                            <button class="info-btn" onclick="showInfo('budget')">ℹ️</button>
-                        </div>
-                        <div class="filter-options">
-                            <button class="filter-option" data-value="budget">💰 $</button>
-                            <button class="filter-option" data-value="moderate">💵 $$</button>
-                            <button class="filter-option" data-value="premium">💎 $$$</button>
-                            <button class="filter-option" data-value="luxury">👑 $$$$</button>
-                        </div>
-                    </div>
-
-                    <!-- Step 10: Outdoor/Indoor -->
-                    <div class="filter-step" data-step="10">
-                        <div class="filter-header">
-                            <h2>Indoor or Outdoor?</h2>
-                            <button class="info-btn" onclick="showInfo('location-type')">ℹ️</button>
-                        </div>
-                        <div class="filter-options">
-                            <button class="filter-option" data-value="outdoor">🌳 Outdoor</button>
-                            <button class="filter-option" data-value="indoor">🏢 Indoor</button>
-                            <button class="filter-option" data-value="mixed">🔄 Mixed</button>
-                        </div>
-                    </div>
-
-                    <!-- Step 11: Music Preference -->
-                    <div class="filter-step" data-step="11">
-                        <div class="filter-header">
-                            <h2>Music style?</h2>
-                            <button class="info-btn" onclick="showInfo('music')">ℹ️</button>
-                        </div>
-                        <div class="filter-options">
-                            <button class="filter-option" data-value="pop">🎵 Pop</button>
-                            <button class="filter-option" data-value="jazz">🎷 Jazz</button>
-                            <button class="filter-option" data-value="electronic">🎧 Electronic</button>
-                            <button class="filter-option" data-value="acoustic">🎸 Acoustic</button>
-                        </div>
-                    </div>
-
-                    <!-- Step 12: Special Requirements -->
-                    <div class="filter-step" data-step="12">
-                        <div class="filter-header">
-                            <h2>Special needs?</h2>
-                            <button class="info-btn" onclick="showInfo('special')">ℹ️</button>
-                        </div>
-                        <div class="filter-options multi-select">
-                            <button class="filter-option" data-value="pet-friendly">🐾 Pet Friendly</button>
-                            <button class="filter-option" data-value="parking">🅿️ Parking</button>
-                            <button class="filter-option" data-value="wheelchair">♿ Wheelchair</button>
-                            <button class="filter-option" data-value="quiet">🤐 Quiet</button>
-                        </div>
-                    </div>
-
-                    <!-- Step 13: Crowd -->
-                    <div class="filter-step" data-step="13">
-                        <div class="filter-header">
-                            <h2>How crowded?</h2>
-                            <button class="info-btn" onclick="showInfo('crowd')">ℹ️</button>
-                        </div>
-                        <div class="filter-options">
-                            <button class="filter-option" data-value="empty">💨 Empty</button>
-                            <button class="filter-option" data-value="moderate">👥 Moderate</button>
-                            <button class="filter-option" data-value="busy">🎉 Busy</button>
-                            <button class="filter-option" data-value="packed">🤯 Packed</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="filter-controls">
-                    <button class="btn-secondary" onclick="previousStep()">Back</button>
-                    <button class="btn-primary" id="next-btn" onclick="nextStep()">Next</button>
-                </div>
-            </section>
-
-            <!-- PROGRAM VIEW -->
-            <section id="program-screen" class="screen">
-                <div class="screen-header">
-                    <button class="back-btn" onclick="goBack()">←</button>
-                    <h1 class="screen-title">Your Program</h1>
-                </div>
-
-                <div class="program-content">
-                    <div class="program-summary">
-                        <div class="match-badge">
-                            <div class="match-circle">92%</div>
-                            <span>Match</span>
-                        </div>
-                        <div class="duration-info">
-                            <span class="duration">3h 45m</span>
-                            <span class="time">6:00 PM - 9:45 PM</span>
-                        </div>
-                    </div>
-
-                    <div class="venue-item">
-                        <div class="venue-label">🍽️ Dinner</div>
-                        <div class="venue-card">
-                            <h3>The Italian Corner</h3>
-                            <div class="arrival-time">Arrival: 6:00 PM</div>
-                            <div class="match-indicator">
-                                <svg viewBox="0 0 100 100" class="circular-progress">
-                                    <circle cx="50" cy="50" r="45" class="progress-bg"></circle>
-                                    <circle cx="50" cy="50" r="45" class="progress-fill" style="stroke-dasharray: 282.7; stroke-dashoffset: 28.27;"></circle>
-                                    <text x="50" y="57" text-anchor="middle" class="progress-text">89%</text>
-                                </svg>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot blue"></div>
+                                <div class="timeline-content">
+                                    <p class="time">19:30</p>
+                                    <h4>Dinner: Noema Athens</h4>
+                                    <p class="description">Cycladic gastronomy in the heart of the city.</p>
+                                </div>
                             </div>
-                            <button class="expand-btn" onclick="toggleAlternatives(this)">Show alternatives</button>
-                            <div class="alternatives hidden">
-                                <div class="alt-venue">🍕 Pizza Mania - 87%</div>
-                                <div class="alt-venue">🍣 Sushi House - 85%</div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot coral"></div>
+                                <div class="timeline-content">
+                                    <p class="time">22:00</p>
+                                    <h4>Cocktails: Aster Rooftop</h4>
+                                    <p class="description">Panoramic Acropolis views & mixology.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot purple"></div>
+                                <div class="timeline-content">
+                                    <p class="time">23:30</p>
+                                    <h4>Park walk</h4>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="walking-time">🚶 6 min walk</div>
-
-                    <div class="venue-item">
-                        <div class="venue-label">🍸 Drinks</div>
-                        <div class="venue-card">
-                            <h3>Blue Lounge</h3>
-                            <div class="arrival-time">Arrival: 7:00 PM</div>
-                            <div class="match-indicator">
-                                <svg viewBox="0 0 100 100" class="circular-progress">
-                                    <circle cx="50" cy="50" r="45" class="progress-bg"></circle>
-                                    <circle cx="50" cy="50" r="45" class="progress-fill" style="stroke-dasharray: 282.7; stroke-dashoffset: 56.54;"></circle>
-                                    <text x="50" y="57" text-anchor="middle" class="progress-text">80%</text>
-                                </svg>
-                            </div>
-                            <button class="expand-btn" onclick="toggleAlternatives(this)">Show alternatives</button>
-                            <div class="alternatives hidden">
-                                <div class="alt-venue">🍷 Wine Bar - 78%</div>
-                                <div class="alt-venue">🍺 Craft Beer - 76%</div>
-                            </div>
-                        </div>
+                    <!-- Logistics & Access -->
+                    <div class="logistics-section">
+                        <h3>LOGISTICS & ACCESS</h3>
+                        <button class="action-btn">🏛️ Get Directions</button>
+                        <button class="action-btn">💾 View savings</button>
                     </div>
 
-                    <div class="extras-section">
-                        <h3>Extra Suggestions</h3>
-                        <div class="extra-item">🍦 Ice Cream Parlor - 5 min</div>
-                        <div class="extra-item">🎬 Cinema - 12 min</div>
-                        <div class="extra-item">🌳 Central Park - 8 min</div>
+                    <!-- Share & Map -->
+                    <div class="share-section">
+                        <a href="#" class="share-link">↗️ Share Itinerary</a>
                     </div>
 
-                    <div class="program-actions">
-                        <button class="btn-primary" onclick="switchToMapView()">Switch to Map View</button>
-                        <button class="btn-secondary">Finalize Program</button>
+                    <div class="map-preview">
+                        <div class="map-placeholder">🗺️ Map Preview</div>
+                        <button class="map-btn">📍 View in Map</button>
                     </div>
                 </div>
             </section>
 
-            <!-- MAP VIEW -->
+            <!-- MAP SCREEN -->
             <section id="map-screen" class="screen">
-                <div class="screen-header">
-                    <button class="back-btn" onclick="goBack()">←</button>
-                    <h1 class="screen-title">Map View</h1>
+                <div class="map-header">
+                    <input type="text" placeholder="Search Glyfada vibes..." class="map-search">
                 </div>
-                <div class="map-container">
-                    <div class="map-placeholder">
-                        🗺️ Map with venue markers
-                    </div>
-                    <div class="map-legend">
-                        <div class="legend-item">🍽️ Dinner</div>
-                        <div class="legend-item">🍸 Drinks</div>
-                        <div class="legend-item">🎯 Extras</div>
+                <div class="map-filters">
+                    <button class="map-filter active">⚙️ Filters</button>
+                    <button class="map-filter">🍽️ Food</button>
+                    <button class="map-filter">🍹 Drinks</button>
+                </div>
+                <div class="map-container">🗺️ Map with markers</div>
+                <div class="venue-preview">
+                    <div class="match-badge">⚡ 94% Match</div>
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23333' width='100' height='100'/%3E%3C/svg%3E" alt="venue" class="venue-preview-image">
+                    <h3>Noema Athens</h3>
+                    <p>⭐ 4.9 • Modern Greek • 5 min walk</p>
+                    <div class="venue-preview-buttons">
+                        <button class="btn-small">◆ Directions</button>
+                        <button class="btn-small">👤 Profile</button>
                     </div>
                 </div>
-                <button class="btn-primary" onclick="switchToProgramView()">Back to Program</button>
             </section>
 
-            <!-- VENUE PROFILE -->
-            <section id="venue-profile-screen" class="screen">
-                <div class="screen-header">
-                    <button class="back-btn" onclick="goBack()">←</button>
+            <!-- YOUR PLAN SCREEN (Detailed) -->
+            <section id="your-plan-screen" class="screen">
+                <div class="plan-detail-header">
+                    <h2>Your Plan</h2>
+                    <p class="duration">Total duration: 4h 30m</p>
                 </div>
-                <div class="venue-profile-content">
-                    <div class="venue-header">
-                        <h1>The Italian Corner</h1>
-                        <button class="save-btn">💾 Save</button>
+                <div class="plan-detail-content">
+                    <div class="plan-item">
+                        <div class="plan-dot blue"></div>
+                        <div class="plan-details">
+                            <p class="time">19:30</p>
+                            <span class="match-tag">85% Match</span>
+                            <h3>Dinner</h3>
+                            <p>Noema Athens</p>
+                            <a href="#">More Options ▼</a>
+                        </div>
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23ddd' width='100' height='100'/%3E%3C/svg%3E" alt="venue" class="plan-img">
                     </div>
-
-                    <div class="venue-gallery">
-                        <div class="gallery-item">📷 Photo 1</div>
-                        <div class="gallery-item">📷 Crowd View</div>
-                        <div class="gallery-item">🎥 Video</div>
+                    <p class="walk-time">🚶 15 min walk</p>
+                    <div class="plan-item">
+                        <div class="plan-dot coral"></div>
+                        <div class="plan-details">
+                            <p class="time">22:00</p>
+                            <h3>Cocktails</h3>
+                            <p>Aster Rooftop</p>
+                        </div>
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23ddd' width='100' height='100'/%3E%3C/svg%3E" alt="venue" class="plan-img">
                     </div>
-
-                    <div class="venue-section">
-                        <h3>Menu & Prices</h3>
-                        <div class="menu-item">
-                            <div class="menu-name">Pasta Carbonara</div>
-                            <div class="menu-price">$12</div>
+                    <p class="walk-time">🚶 15 min walk</p>
+                    <div class="plan-item">
+                        <div class="plan-dot purple"></div>
+                        <div class="plan-details">
+                            <p class="time">23:30</p>
+                            <h3>Surprise Stop</h3>
+                            <p>To be revealed ✨</p>
                         </div>
-                        <div class="menu-item">
-                            <div class="menu-name">Risotto</div>
-                            <div class="menu-price">$14</div>
-                        </div>
+                        <div class="plan-img-add">+</div>
                     </div>
+                </div>
 
-                    <div class="venue-info-grid">
-                        <div class="info-box">
-                            <div class="info-label">Price Range</div>
-                            <div class="info-value">$$</div>
+                <!-- Add a Surprise -->
+                <div class="surprise-section">
+                    <h3>Add a surprise?</h3>
+                    <p>We found these for you</p>
+                    <div class="surprise-items">
+                        <div class="surprise-item">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23FFB6C1' width='100' height='100'/%3E%3C/svg%3E" alt="ice cream" class="surprise-img">
+                            <h4>Ice cream</h4>
+                            <p>Kayak</p>
+                            <p>5 MIN WALK</p>
+                            <button class="add-btn">+</button>
                         </div>
-                        <div class="info-box">
-                            <div class="info-label">Age Group</div>
-                            <div class="info-value">25-35</div>
-                        </div>
-                        <div class="info-box">
-                            <div class="info-label">Music</div>
-                            <div class="info-value">Jazz</div>
-                        </div>
-                        <div class="info-box">
-                            <div class="info-label">Vibe</div>
-                            <div class="info-value">Romantic</div>
-                        </div>
-                    </div>
-
-                    <div class="venue-section">
-                        <h3>Details</h3>
-                        <p class="detail-item">📍 123 Restaurant St</p>
-                        <p class="detail-item">📞 (555) 123-4567</p>
-                        <p class="detail-item">🌐 www.example.com</p>
-                        <p class="detail-item">👥 Male/Female: 45% / 55%</p>
-                        <p class="detail-item">🔔 Peak: Fri-Sat 8-11 PM</p>
-                    </div>
-
-                    <div class="venue-section">
-                        <h3>Reviews</h3>
-                        <div class="review">
-                            <div class="review-author">Sarah M.</div>
-                            <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                            <div class="review-text">Amazing food and atmosphere!</div>
+                        <div class="surprise-item">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%238B4513' width='100' height='100'/%3E%3C/svg%3E" alt="bar" class="surprise-img">
+                            <h4>Hidden Bar</h4>
+                            <p>The Secret Spot</p>
+                            <p>8 MIN WALK</p>
+                            <button class="add-btn">+</button>
                         </div>
                     </div>
                 </div>
+
+                <button class="btn-primary finalize-btn">FINALIZE</button>
             </section>
 
             <!-- PROFILE SCREEN -->
             <section id="profile-screen" class="screen">
-                <div class="screen-header">
-                    <h1 class="screen-title">My Profile</h1>
+                <div class="profile-header">
+                    <button class="back-btn">←</button>
+                    <h2>Profile</h2>
+                    <button class="settings-btn">⚙️</button>
                 </div>
 
                 <div class="profile-content">
-                    <div class="user-info">
-                        <div class="user-avatar">👤</div>
-                        <h2 class="user-name">John Doe</h2>
-                        <p class="user-status">@johndoe</p>
+                    <div class="user-card">
+                        <div class="user-avatar">👩</div>
+                        <h2>Valia</h2>
+                        <div class="user-badges">
+                            <span class="badge premium">Premium Member</span>
+                            <span class="badge">Joined Oct 2023</span>
+                        </div>
+                        <div class="user-stats">
+                            <div class="stat">
+                                <span class="stat-number">12</span>
+                                <span class="stat-label">Outings this month</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">5</span>
+                                <span class="stat-label">New Places</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-section">
+                        <h3>About</h3>
+                        <div class="about-item">
+                            <span class="about-label">Age</span>
+                            <span class="about-value">24</span>
+                        </div>
+                        <div class="about-item">
+                            <span class="about-label">Favorite Area</span>
+                            <span class="about-value">Downtown</span>
+                        </div>
+                        <div class="about-item">
+                            <span class="about-label">Music</span>
+                            <span class="about-value">Tech House</span>
+                        </div>
+                        <div class="about-item">
+                            <span class="about-label">Lifestyle</span>
+                            <span class="about-value">Urban Explorer</span>
+                        </div>
                     </div>
 
                     <div class="saved-venues-section">
-                        <h2 class="section-title">Saved Venues</h2>
-                        <div class="filter-bar">
-                            <input type="text" placeholder="Search venues..." class="search-input">
-                            <select class="filter-select">
-                                <option>All Areas</option>
-                                <option>Downtown</option>
-                                <option>Beach</option>
-                            </select>
-                            <select class="filter-select">
-                                <option>All Vibes</option>
-                                <option>Chill</option>
-                                <option>Wild</option>
-                            </select>
+                        <div class="section-header-profile">
+                            <h3>Saved Venues</h3>
+                            <a href="#" class="view-all">View All</a>
                         </div>
+                        <div class="venues-grid">
+                            <div class="venue-card">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23333' width='100' height='100'/%3E%3C/svg%3E" alt="Noema">
+                                <h4>Noema</h4>
+                                <p>Modern Mediterranean</p>
+                            </div>
+                            <div class="venue-card">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23333' width='100' height='100'/%3E%3C/svg%3E" alt="Aster">
+                                <h4>Aster Rooftop</h4>
+                                <p>Sky Bar & Lounge</p>
+                            </div>
+                        </div>
+                    </div>
 
-                        <div class="saved-venues-grid">
-                            <div class="saved-venue-card">
-                                <div class="venue-thumb">🏢</div>
-                                <div class="venue-name">The Italian Corner</div>
-                                <div class="venue-meta">Italian • $$</div>
-                                <button class="btn-small">View</button>
+                    <div class="activity-section">
+                        <h3>Recent Activity</h3>
+                        <div class="activity-item">
+                            <span class="activity-icon">🍽️</span>
+                            <div class="activity-details">
+                                <p>Dinner at The Ivy</p>
+                                <span>2 days ago • Confirmed</span>
                             </div>
-                            <div class="saved-venue-card">
-                                <div class="venue-thumb">🍸</div>
-                                <div class="venue-name">Blue Lounge</div>
-                                <div class="venue-meta">Cocktails • $$$</div>
-                                <button class="btn-small">View</button>
+                            <span>›</span>
+                        </div>
+                        <div class="activity-item">
+                            <span class="activity-icon">🎭</span>
+                            <div class="activity-details">
+                                <p>Night Out - Soho District</p>
+                                <span>Last Saturday • Completed</span>
                             </div>
-                            <div class="saved-venue-card">
-                                <div class="venue-thumb">🍕</div>
-                                <div class="venue-name">Pizza Mania</div>
-                                <div class="venue-meta">Pizza • $</div>
-                                <button class="btn-small">View</button>
+                            <span>›</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SAVED VENUES SCREEN -->
+            <section id="saved-venues-screen" class="screen">
+                <div class="saved-header">
+                    <button class="back-btn">←</button>
+                    <h2>Saved</h2>
+                    <button class="settings-btn">⚙️</button>
+                </div>
+
+                <div class="saved-content">
+                    <div class="search-container">
+                        <input type="text" placeholder="Search your saved spots..." class="search-input">
+                    </div>
+
+                    <div class="category-pills">
+                        <button class="pill active">All</button>
+                        <button class="pill">Food</button>
+                        <button class="pill">Drinks</button>
+                        <button class="pill">Clubs</button>
+                    </div>
+
+                    <div class="filter-dropdowns">
+                        <select class="dropdown-filter">
+                            <option>Night/Day ▼</option>
+                        </select>
+                        <select class="dropdown-filter">
+                            <option>Budget ▼</option>
+                        </select>
+                        <select class="dropdown-filter">
+                            <option>Style ▼</option>
+                        </select>
+                    </div>
+
+                    <div class="saved-venues-grid">
+                        <div class="saved-venue">
+                            <div class="saved-match">⚡ 98%</div>
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23333' width='100' height='100'/%3E%3C/svg%3E" alt="venue">
+                            <div class="saved-info">
+                                <h4>Noema</h4>
+                                <p>FOOD • FINE DINING</p>
+                                <p>📍 Mykonos</p>
+                            </div>
+                        </div>
+                        <div class="saved-venue">
+                            <div class="saved-match">⚡ 92%</div>
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23333' width='100' height='100'/%3E%3C/svg%3E" alt="venue">
+                            <div class="saved-info">
+                                <h4>Aster Rooftop</h4>
+                                <p>DRINKS • ROOFTOP</p>
+                                <p>📍 Hollywood</p>
+                            </div>
+                        </div>
+                        <div class="saved-venue">
+                            <div class="saved-match">⚡ 85%</div>
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23333' width='100' height='100'/%3E%3C/svg%3E" alt="venue">
+                            <div class="saved-info">
+                                <h4>Bolivar</h4>
+                                <p>CLUBS • ELECTRONIC</p>
+                                <p>📍 Athens</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
         </main>
-    </div>
-
-    <!-- Info Modal -->
-    <div id="info-modal" class="modal hidden">
-        <div class="modal-content">
-            <button class="close-btn" onclick="closeModal()">✕</button>
-            <div id="modal-body"></div>
-        </div>
     </div>
 
     <script src="script.js"></script>
