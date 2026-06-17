@@ -1,0 +1,32 @@
+.chip {
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  background-color: #e5e2e1;
+  color: #1c1b1b;
+}
+
+.chip:hover {
+  background-color: #dcd9d9;
+}
+
+.chip.selected {
+  background: linear-gradient(135deg, #15157d 0%, #ad3300 100%);
+  color: #ffffff;
+}
+
+.chip-gradient {
+  background: linear-gradient(135deg, #15157d 0%, #ad3300 100%);
+  color: #ffffff;
+}
+
+.chip-gradient.selected {
+  box-shadow: 0px 4px 12px rgba(21, 21, 125, 0.3);
+}

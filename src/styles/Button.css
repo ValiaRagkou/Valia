@@ -1,0 +1,66 @@
+.btn {
+  border: none;
+  cursor: pointer;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Primary Button */
+.btn-primary {
+  background: linear-gradient(135deg, #15157d 0%, #ad3300 100%);
+  color: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background-color: #1c1b1b;
+  color: #ffffff;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: #2d2c2c;
+}
+
+/* Outline Button */
+.btn-outline {
+  background-color: transparent;
+  color: #1c1b1b;
+  border: 2px solid #1c1b1b;
+}
+
+.btn-outline:hover:not(:disabled) {
+  background-color: #f0eded;
+}
+
+/* Size Variants */
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 14px;
+}
+
+.btn-md {
+  padding: 0.75rem 1.5rem;
+  font-size: 16px;
+}
+
+.btn-lg {
+  padding: 1rem 2rem;
+  font-size: 18px;
+  width: 100%;
+}
